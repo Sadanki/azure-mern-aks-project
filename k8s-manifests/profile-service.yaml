@@ -1,0 +1,13 @@
+# profile-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: profile-service
+spec:
+  selector:
+    app: profile
+  ports:
+    - protocol: TCP
+      port: 80           # service port exposed
+      targetPort: 3002   # container port
+  type: ClusterIP

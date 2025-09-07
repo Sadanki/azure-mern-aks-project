@@ -1,0 +1,13 @@
+# hello-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-service
+spec:
+  selector:
+    app: hello
+  ports:
+    - protocol: TCP
+      port: 80           # service port exposed
+      targetPort: 3001   # container port
+  type: ClusterIP
